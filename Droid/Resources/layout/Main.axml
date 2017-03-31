@@ -1,23 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/background_light"
-    android:minWidth="25px"
-    android:minHeight="25px">
-    <TextView
-        android:text="Current Meter Reading"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/holo_purple"
-        android:id="@+id/textView1" />
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/editext1"
-        android:textColor="@android:color/darker_gray"
-        android:inputType="text" />
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:text="Current Meter Reading"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/vpurple"
+            android:textSize="12dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/textView1" />
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Meter Reading"
+            android:textColorHint="@android:color/darker_gray"
+            android:textColor="@android:color/darker_gray"
+            android:inputType="number"
+            android:layout_marginRight="11dp"
+            android:layout_marginLeft="11dp" />
+        <TextView
+            android:text="Current Meter Reading"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/vpurple"
+            android:textSize="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/textView1" />
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Meter Reading"
+            android:textColorHint="@android:color/darker_gray"
+            android:textColor="@android:color/darker_gray"
+            android:inputType="number"
+            android:layout_marginRight="11dp"
+            android:layout_marginLeft="11dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="left">
+                <TextView
+                    android:text="Fuel Quantity"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/vpurple"
+                    android:textSize="12dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp" />
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Quantity"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textColor="@android:color/darker_gray"
+                    android:inputType="number"
+                    android:layout_marginRight="11dp"
+                    android:layout_marginLeft="11dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="right">
+                <TextView
+                    android:text="Total Fuel Price"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/vpurple"
+                    android:textSize="12dp"
+                    android:layout_marginRight="60dp" />
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Fuel Price"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textColor="@android:color/darker_gray"
+                    android:inputType="number" />
+            </LinearLayout>
+        </LinearLayout>
+        <Button
+            android:text="Calculate Milage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textColor="@color/vpurple"
+            android:id="@+id/button1" />
+    </LinearLayout>
+</RelativeLayout>

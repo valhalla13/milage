@@ -13,12 +13,20 @@ namespace MilageCalculator.Droid
 		{
 			base.OnCreate(savedInstanceState);
 
+
+
 			// Set our view from the "main" layout resource
 			SetContentView(Resource.Layout.Main);
 
 			// Get our button from the layout resource,
 			// and attach an event to it
 
+		}
+
+		public override bool OnCreateOptionsMenu(Android.Views.IMenu menu)
+		{
+			MenuInflater.Inflate(Resource.Menu.option_menu, menu);
+			return base.OnCreateOptionsMenu(menu);
 		}
 	}
 }
